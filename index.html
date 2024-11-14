@@ -41,9 +41,9 @@
                             <label for="selectCategory" class="col-sm-2 col-form-label">Categoria:</label>
                             <div class="col-sm-4">
                                 <select class="form-select" id="selectCategory" area-label="Selecione uma categoria">
-                                  <option value="1">Promoção Própria</option>
-                                  <option value="2">Nacional</option>
-                                  <option value="3">Importado</option>
+                                    <option value="1">Promoção Própria</option>
+                                    <option value="2">Nacional</option>
+                                    <option value="3">Importado</option>
                                 </select>
                             </div>
                         </div>
@@ -51,15 +51,15 @@
                             <legend class="col-form-label col-sm-2 pt-0">Opções</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="check-box-opcoes" id="check-box-opcoes1"
-                                        value="option1" checked>
+                                    <input class="form-check-input" type="radio" name="check-box-opcoes"
+                                        id="check-box-opcoes1" value="option1" checked>
                                     <label class="form-check-label" for="check-box-opcoes1">
                                         Promoção
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="check-box-opcoes" id="check-box-opcoes2"
-                                        value="option2">
+                                    <input class="form-check-input" type="radio" name="check-box-opcoes"
+                                        id="check-box-opcoes2" value="option2">
                                     <label class="form-check-label" for="check-box-opcoes2">
                                         Lançamento
                                     </label>
@@ -78,6 +78,24 @@
             <div class="display-6">
                 Produtos Cadastrados:
             </div>
+            <div class="row">
+                <div class="col-md-10 offset-1">
+                    <table class="table" id="productsTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Opções</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -87,6 +105,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
