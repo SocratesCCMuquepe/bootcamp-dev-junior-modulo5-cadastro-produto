@@ -54,6 +54,28 @@ function loadProducts(){
     }
 }
 
+//Salvar produtos
+function save(){
+    
+    var productNew = {
+            id: products.length + 1,
+            name: document.getElementById("inputName").value,
+            description: document.getElementById("inputDescription").value,
+            price: parseFloat(document.getElementById("inputPrice").value),
+            category: document.getElementById("selectCategory").value,
+            promotion: document.getElementById("checkboxPromotion").checked,
+            new: document.getElementById("checkboxNew").checked
+    };
+
+    console.log(productNew);
+
+    addNewRow(productNew);
+    products.push(productNew);
+    
+    document.getElementById("formProduct").reset();
+
+}
+
 //Add new Row
 function addNewRow(prod){
     var table = document.getElementById("productsTable");

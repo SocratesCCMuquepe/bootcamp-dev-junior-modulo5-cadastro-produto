@@ -12,7 +12,7 @@
 <body>
     <main class="container mt-3">
         <header class="display-4 bg-light text-center">
-            Cadastro e Produtos
+            Cadastro de Produtos
         </header>
         <section>
             <div class="display-6">
@@ -20,27 +20,28 @@
             </div>
             <div class="row">
                 <div class="col-md-10 offset-1">
-                    <form>
+                    <form onsubmit="save(); return false;" id="formProduct">
                         <div class="row mb-3 mt-3">
                             <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName">
+                                <input type="text" class="form-control" id="inputName" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputDescription" class="col-sm-2 col-form-label">Descrição:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputDescription">
+                                <input type="text" class="form-control" id="inputDescription" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputPrice" class="col-sm-2 col-form-label">Preço:</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="inputPrice">
+                                <input type="text" class="form-control" id="inputPrice" required>
                             </div>
                             <label for="selectCategory" class="col-sm-2 col-form-label">Categoria:</label>
                             <div class="col-sm-4">
-                                <select class="form-select" id="selectCategory" area-label="Selecione uma categoria">
+                                <select class="form-select" id="selectCategory" area-label="Selecione uma categoria" required>
+                                    <option value="" selected>Escolha:</option>
                                     <option value="1">Promoção Própria</option>
                                     <option value="2">Nacional</option>
                                     <option value="3">Importado</option>
@@ -51,16 +52,16 @@
                             <legend class="col-form-label col-sm-2 pt-0">Opções</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="check-box-opcoes"
-                                        id="check-box-opcoes1" value="option1" checked>
-                                    <label class="form-check-label" for="check-box-opcoes1">
+                                    <input class="form-check-input" type="radio" name="checkboxPromotion"
+                                        id="checkboxPromotion" value="option1" checked>
+                                    <label class="form-check-label" for="checkboxPromotion">
                                         Promoção
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="check-box-opcoes"
-                                        id="check-box-opcoes2" value="option2">
-                                    <label class="form-check-label" for="check-box-opcoes2">
+                                    <input class="form-check-input" type="radio" name="checkboxNew"
+                                        id="checkboxNew" value="option2">
+                                    <label class="form-check-label" for="checkboxNew">
                                         Lançamento
                                     </label>
                                 </div>
