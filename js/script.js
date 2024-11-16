@@ -91,7 +91,9 @@ function addNewRow(prod){
 
     // Insert product description
     var descriptionNode = document.createTextNode(prod.description);
-    newRow.insertCell().appendChild(descriptionNode);
+    var cell = newRow.insertCell();
+    cell.className="d-none d-md-table-cell";
+    cell.appendChild(descriptionNode);
 
     // Insert product price
     var formatter = new Intl.NumberFormat("pt-BR",{
@@ -116,6 +118,10 @@ function addNewRow(prod){
         options += '<span class="badge bg-primary">L</span>';
 
     }
+    
+    cell = newRow.insertCell()
+    cell.className= "d-none d-md-table-cell";
+    cell.innerHTML = options;
 
-    newRow.insertCell().innerHTML = options;
+    // newRow.insertCell().innerHTML = options;
 }
