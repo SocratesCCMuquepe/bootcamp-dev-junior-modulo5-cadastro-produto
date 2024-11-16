@@ -1,3 +1,5 @@
+$('#inputPrice').mask('000.000.000.000.000,00', {reverse: true});
+
 var products = [
     {
         id: 1,
@@ -25,6 +27,15 @@ var products = [
         category: 3,
         promotion: false,
         new: false
+    },
+    {
+        id: 4,
+        name: "Computador LENOVO",
+        description: "Intel i9, 32GB, HD 500T",
+        price: 4800,
+        category: 3,
+        promotion: false,
+        new: true
     }
 ]
 
@@ -61,7 +72,12 @@ function addNewRow(prod){
     newRow.insertCell().appendChild(descriptionNode);
 
     // Insert product price
-    var priceNode = document.createTextNode(prod.price);
+    var formatter = new Intl.NumberFormat("pt-BR",{
+        style:"currency",
+        currency: "BRL"
+    })
+
+    var priceNode = document.createTextNode(formatter.format(prod.price));
     newRow.insertCell().appendChild(priceNode);
 
     // Insert product category
@@ -72,7 +88,7 @@ function addNewRow(prod){
     var options = '';
 
     if(prod.promotion){
-        options = '<span class="badge bg-success">P</span>';
+        options = '<span class="badge bg-success me-1">P</span>';
     }
     if(prod.new){
         options += '<span class="badge bg-primary">L</span>';
